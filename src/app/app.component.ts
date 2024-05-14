@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'crm';
+  public title = 'crm';
+  public open: boolean = false;
+  public onClick() {
+    this.open = !this.open
+  }
 }
