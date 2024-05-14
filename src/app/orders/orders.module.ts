@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageListOrdersComponent } from './pages/page-list-orders/page-list-orders.component';
 import { PageAddOrdersComponent } from './page-add-orders/page-add-orders.component';
 import { PageEditOrdersComponent } from './page-edit-orders/page-edit-orders.component';
+import { OrdersRoutingModule } from './orders-routing.module';
 
 
 
@@ -13,7 +14,9 @@ import { PageEditOrdersComponent } from './page-edit-orders/page-edit-orders.com
     PageEditOrdersComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    OrdersRoutingModule
+   
   ]
 })
 export class OrdersModule { }
