@@ -1,14 +1,33 @@
 <ul class="nav flex-column">
   <li class="nav-item">
-    <a routerLink="add" class="nav-link">Ajouter order</a>
+    <a
+      class="nav-link"
+      routerLink="add"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Ajouter Order</a
+    >
   </li>
   <li class="nav-item">
-    <a routerLink="edit" class="nav-link">Link</a>
+    <a
+      class="nav-link"
+      routerLink="edit"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Edit Order</a
+    >
   </li>
   <li class="nav-item">
-    <a class="nav-link">Link</a>
+    <a
+      class="nav-link"
+      routerLink="/"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Home</a
+    >
   </li>
   <li class="nav-item">
-    <a routerLink="/" class="nav-link">Disabled</a>
+    <a class="nav-link" routerLink="errors" routerLinkActive='active' [routerLinkActiveOptions]="{exact:
+      true}">Errors</a>
   </li>
 </ul>
