@@ -4,6 +4,7 @@ import { PageListClientsComponent } from './page-list-clients/page-list-clients.
 import { PageAddClientsComponent } from './page-add-clients/page-add-clients.component';
 import { PageEditClientsComponent } from './page-edit-clients/page-edit-clients.component';
 import { ClientsRoutingModule } from './clients-routing.module';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -15,7 +16,8 @@ import { ClientsRoutingModule } from './clients-routing.module';
   ],
   imports: [
     CommonModule,
-  ClientsRoutingModule
+  ClientsRoutingModule,
+  FormsModule
   ],
   exports : [
     PageListClientsComponent,

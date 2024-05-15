@@ -1,27 +1,29 @@
 <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Type</th>
-        <th>Client</th>
-        <th>TJM HT</th>
-        <th>Nb Jours</th>
-        <th>TVA</th>
-        <th>State</th>
-        <th>Comment</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of client">
-        <td>{{ product.id }}</td>
-        <td>{{ product.typePresta }}</td>
-        <td>{{ product.client }}</td>
-        <td>{{ product.tjmHt }}</td>
-        <td>{{ product.nbJours }}</td>
-        <td>{{ product.tva }}</td>
-        <td>{{ product.state }}</td>
-        <td>{{ product.comment }}</td>
-      </tr>
-    </tbody>
-  </table>
-  
+  <thead>
+    <tr>
+      <th></th> <th>ID</th>
+      <th>Name</th>
+      <th>State</th>
+      <th>TVA (%)</th>
+      <th>Total CaHt</th>
+      <th>Comment</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let client of clients">
+      <td>
+        <button type="button" class="btn btn-sm btn-primary" (click)="editClient(client.id)">Edit</button>
+        <button type="button" class="btn btn-sm btn-danger" (click)="deleteClient(client.id)">Delete</button>
+      </td>
+      <td>{{ client.id }}</td>
+      <td>{{ client.name }}</td>
+      <td>{{ client.state }}</td>
+      <td>{{ client.tva }}</td>
+      <td>{{ client.totalCaHt }}</td>
+      <td>{{ client.comment }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<form (ngSubmit)="onSubmit()">
+  </form>

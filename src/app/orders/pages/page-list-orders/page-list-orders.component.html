@@ -1,27 +1,45 @@
 <table>
-    <thead>
-      <tr>
-        <th>ID</th>
-        <th>Type</th>
-        <th>Client</th>
-        <th>TJM HT</th>
-        <th>Nb Jours</th>
-        <th>TVA</th>
-        <th>State</th>
-        <th>Comment</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let product of order">
-        <td>{{ product.id }}</td>
-        <td>{{ product.typePresta }}</td>
-        <td>{{ product.client }}</td>
-        <td>{{ product.tjmHt }}</td>
-        <td>{{ product.nbJours }}</td>
-        <td>{{ product.tva }}</td>
-        <td>{{ product.state }}</td>
-        <td>{{ product.comment }}</td>
-      </tr>
-    </tbody>
-  </table>
-  
+  <thead>
+    <tr>
+      <th>Action</th>
+      <th>ID</th>
+      <th>Type</th>
+      <th>Client</th>
+      <th>TJM HT</th>
+      <th>Nb Jours</th>
+      <th>TVA</th>
+      <th>State</th>
+      <th>Comment</th>
+ 
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let order of orders">
+      <td>
+        <button (click)="editOrder(order.id)">Edit</button>
+        <button (click)="deleteClient(order.id)" style="background-color: red">Delete</button>
+      </td>
+      <td>{{ order.id }}</td>
+      <td>{{ order.typePresta }}</td>
+      <td>{{ order.client }}</td>
+      <td>{{ order.tjmHt }}</td>
+      <td>{{ order.nbJours }}</td>
+      <td>{{ order.tva }}</td>
+      <td [ngClass]="{
+        'yellow-background': order.state === 'CANCELLED',
+        'green-background': order.state === 'CONFIRMED',
+        'red-background': order.state === 'OPTION'
+      }">
+        {{ order.state }}
+      </td>
+      <td>{{ order.comment }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="9" style="text-align: left;">
+        <button (click)="addOrder()" style="background-color: yellow">Ajouter</button>
+      </td>
+    </tr>
+  </tfoot>
+</table>

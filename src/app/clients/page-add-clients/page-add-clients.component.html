@@ -1,1 +1,34 @@
-<p>page-add-clients works!</p>
+<h2>Add Client</h2>
+<form (ngSubmit)="onSubmit()" class="vertical-form">  <label for="id">ID:</label>
+  <input type="text" id="id" name="id" [(ngModel)]="newClient.id" required>
+
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" [(ngModel)]="newClient.name" required>
+
+  <label for="state">State:</label>
+  <select id="state" name="state" [(ngModel)]="newClient.state" required>
+    <option value="ACTIVE">Active</option>
+    <option value="INACTIVE">Inactive</option>
+  </select>
+
+  <label for="tva">TVA (%):</label>
+  <input type="number" id="tva" name="tva" [(ngModel)]="newClient.tva" required>
+
+  <label for="totalCaHt">Total CaHt:</label>
+  <input type="number" id="totalCaHt" name="totalCaHt" [(ngModel)]="newClient.totalCaHt" required>
+
+  <label for="comment">Comment:</label>
+  <textarea id="comment" name="comment" [(ngModel)]="newClient.comment"></textarea>
+
+  <button type="submit">Add Client</button>
+</form>
+
+<div *ngIf="clientAdded">
+  <p>Client added successfully!</p>
+</div>
+
+<style>
+ 
+
+ 
+</style>

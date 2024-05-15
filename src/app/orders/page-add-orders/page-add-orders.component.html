@@ -1,1 +1,43 @@
-<p>page-add-orders works!</p>
+<form (ngSubmit)="onSubmit()">
+    <h2>Client Information</h2>
+    <div class="form-group">
+      <label for="tjmHt">TJM HT (€):</label>
+      <input type="number" id="tjmHt" [(ngModel)]="newOrder.tjmHt" name="tjmHt" required min="0">
+    </div>
+    <div class="form-group">
+      <label for="nbJours">Number of Days:</label>
+      <input type="number" id="nbJours" [(ngModel)]="newOrder.nbJours" name="nbJours" required min="0">
+    </div>
+    <div class="form-group">
+      <label for="tva">TVA (%):</label>
+      <input type="number" id="tva" [(ngModel)]="newOrder.tva" name="tva" required min="0">
+    </div>
+    <div class="form-group">
+      <label for="state">State:</label>
+      <select id="state" [(ngModel)]="newOrder.state" name="state" required>
+        <option value="OPTION">OPTION</option>
+        <option value="OPTION">CANCELLED</option>
+        <option value="OPTION">CONFIRMED</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="typePresta">Type of Service:</label>
+      <select id="typePresta" [(ngModel)]="newOrder.typePresta" name="typePresta" required>
+        <option value="formation">Formation</option>
+        <option value="formation">Coaching</option>
+        <option value="formation">Conseil</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="client">Client:</label>
+      <select id="client" [(ngModel)]="newOrder.client" name="client" required>
+        <option value="nouveau">Nouveau</option>
+        </select>
+    </div>
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea id="comment" [(ngModel)]="newOrder.comment" name="comment" rows="4"></textarea>
+    </div>
+    <button type="submit">Save Client</button>
+  </form>
+  

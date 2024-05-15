@@ -1,1 +1,25 @@
-<p>page-edit-clients works!</p>
+<form (ngSubmit)="onSubmit()">
+    <label for="id">ID:</label>
+    <input type="text" id="id" name="id" [(ngModel)]="client.id" required> <br>
+  
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" [(ngModel)]="client.name" required> <br>
+  
+    <label for="state">State:</label>
+    <select id="state" name="state" [(ngModel)]="client.state" required>
+      <option value="ACTIVE">Active</option>
+      <option value="INACTIVE">Inactive</option>
+    </select> <br>
+  
+    <label for="tva">TVA (%):</label>
+    <input type="number" id="tva" name="tva" [(ngModel)]="client.tva" required> <br>
+  
+    <label for="totalCaHt">Total CaHt:</label>
+    <input type="number" id="totalCaHt" name="totalCaHt" [(ngModel)]="client.totalCaHt" required> <br>
+  
+    <label for="comment">Comment:</label>
+    <textarea id="comment" name="comment" [(ngModel)]="client.comment"></textarea> <br>
+  
+    <button type="submit">Update Client</button>
+  </form>
+  

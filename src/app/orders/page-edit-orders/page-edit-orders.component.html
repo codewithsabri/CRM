@@ -1,1 +1,41 @@
-<p>page-edit-orders works!</p>
+<form (ngSubmit)="onSubmit()">
+  <div class="form-group">
+    <label for="tjmHt">TJM HT</label>
+    <input type="number" class="form-control" id="tjmHt" name="tjmHt" [(ngModel)]="order.tjmHt">
+  </div>
+  <div class="form-group">
+    <label for="nbJours">Nombre de jours</label>
+    <input type="number" class="form-control" id="nbJours" name="nbJours" [(ngModel)]="order.nbJours">
+  </div>
+  <div class="form-group">
+    <label for="tva">TVA (%)</label>
+    <input type="number" class="form-control" id="tva" name="tva" [(ngModel)]="order.tva">
+  </div>
+  <div class="form-group">
+    <label for="state">État</label>
+    <select class="form-control" id="state" name="state" [(ngModel)]="order.state">
+      <option value="OPTION">OPTION</option>
+      <option value="EN_COURS">EN_COURS</option>
+      <option value="FACTURE">FACTURE</option>
+      <option value="PAYE">PAYE</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="typePresta">Type de prestation</label>
+    <select class="form-control" id="typePresta" name="typePresta" [(ngModel)]="order.typePresta">
+      <option value="formation">Formation</option>
+      <option value="coaching">Coaching</option>
+      <option value="conseil">Conseil</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="client">Client</label>
+    <input type="text" class="form-control" id="client" name="client" [(ngModel)]="order.client">
+  </div>
+  <div class="form-group">
+    <label for="comment">Commentaire</label>
+    <textarea class="form-control" id="comment" name="comment"[(ngModel)]="order.comment"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Valider</button>
+  <button type="button" class="btn btn-secondary" (click)="onDeleteClick()">Effacer</button>
+</form>

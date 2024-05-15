@@ -12,6 +12,7 @@ const routes: Routes = [
   {path: '', component: PageListOrdersComponent }, 
   {path: 'add', component: PageAddOrdersComponent }, 
   {path: 'edit', component:PageEditOrdersComponent}, 
+  { path: 'edit/:id', component:PageEditOrdersComponent },
  
 ]
 @NgModule({

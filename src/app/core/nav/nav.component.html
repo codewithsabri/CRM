@@ -2,6 +2,15 @@
   <li class="nav-item">
     <a
       class="nav-link"
+      routerLink="/orders"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >List Orders</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
       routerLink="/orders/add"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
@@ -17,22 +26,14 @@
       >Edit Order</a
     >
   </li>
-  <li class="nav-item">
-    <a
-      class="nav-link"
-      routerLink="/orders"
-      routerLinkActive="active"
-      [routerLinkActiveOptions]="{ exact: true }"
-      >Home</a
-    >
-  </li>
+
   <li class="nav-item">
     <a
       class="nav-link"
       routerLink="/clients"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      >list client</a
+      >List client</a
     >
   </li>
   <li class="nav-item">
@@ -41,7 +42,7 @@
       routerLink="/clients/edit"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      >edit clients</a
+      >Edit clients</a
     >
   </li>
   <li class="nav-item">
@@ -50,7 +51,7 @@
       routerLink="/clients/add"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
-      >ajouter clients</a
+      >Ajouter clients</a
     >
   </li>
   <li class="nav-item">

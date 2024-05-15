@@ -1,0 +1,46 @@
+form {
+    display: flex; /* Arrange elements horizontally */
+    flex-direction: column; /* Stack elements vertically */
+    width: fit-content; /* Adjust width as needed */
+    margin: 0 auto; /* Center the form horizontally */
+    padding: 20px;
+    border: 1px solid #ccc; /* Optional border for visual separation */
+    border-radius: 5px; /* Rounded corners */
+  }
+  
+  .form-group {
+    margin-bottom: 15px; /* Space between form elements */
+    display: flex; /* Arrange label and input horizontally */
+    align-items: center; /* Vertically align labels and inputs */
+    width: 100%; /* Make groups span the full width */
+  }
+  
+  .form-group label {
+    flex: 0 0 30%; /* Label width (adjust as needed) */
+    margin-right: 10px; /* Space between label and input */
+  }
+  
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    flex: 1; /* Input/select/textarea width */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 3px; /* Rounded corners for inputs */
+  }
+  
+  .form-group textarea {
+    min-height: 100px; /* Minimum height for textarea */
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 15px; /* Space between submit button and form */
+    align-self: flex-end; /* Right-align the button within the form */
+  }
+  
