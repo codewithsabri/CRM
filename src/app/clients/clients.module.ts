@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { PageListClientsComponent } from './page-list-clients/page-list-clients.component';
 import { PageAddClientsComponent } from './page-add-clients/page-add-clients.component';
 import { PageEditClientsComponent } from './page-edit-clients/page-edit-clients.component';
+import { ClientsRoutingModule } from './clients-routing.module';
 
 
 
@@ -13,7 +14,8 @@ import { PageEditClientsComponent } from './page-edit-clients/page-edit-clients.
     PageEditClientsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+  ClientsRoutingModule
   ],
   exports : [
     PageListClientsComponent,

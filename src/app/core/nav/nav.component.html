@@ -2,7 +2,7 @@
   <li class="nav-item">
     <a
       class="nav-link"
-      routerLink="add"
+      routerLink="/orders/add"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
       >Ajouter Order</a
@@ -11,7 +11,7 @@
   <li class="nav-item">
     <a
       class="nav-link"
-      routerLink="edit"
+      routerLink="/orders/edit"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
       >Edit Order</a
@@ -20,14 +20,46 @@
   <li class="nav-item">
     <a
       class="nav-link"
-      routerLink="/"
+      routerLink="/orders"
       routerLinkActive="active"
       [routerLinkActiveOptions]="{ exact: true }"
       >Home</a
     >
   </li>
   <li class="nav-item">
-    <a class="nav-link" routerLink="errors" routerLinkActive='active' [routerLinkActiveOptions]="{exact:
-      true}">Errors</a>
+    <a
+      class="nav-link"
+      routerLink="/clients"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >list client</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/clients/edit"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >edit clients</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="/clients/add"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >ajouter clients</a
+    >
+  </li>
+  <li class="nav-item">
+    <a
+      class="nav-link"
+      routerLink="errors"
+      routerLinkActive="active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >Errors</a
+    >
   </li>
 </ul>
