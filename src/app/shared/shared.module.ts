@@ -1,20 +1,12 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ErrorsComponent } from '../errors/errors/errors.component';
-import { MyPipePipe } from './my-pipe.pipe';
 import { TotalPipe } from './pipes/total.pipe';
-
-
-
+import { BtnComponent } from './btn/btn.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [
-    MyPipePipe,
-    TotalPipe
-  ],
-  imports: [
-    CommonModule
-   
-  ]
+  declarations: [TotalPipe, BtnComponent],
+  imports: [CommonModule, RouterModule],
+  exports: [TotalPipe, BtnComponent],
 })
-export class SharedModule { }
+export class SharedModule {}

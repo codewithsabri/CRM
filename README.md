@@ -2,6 +2,10 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.3.
 
+L'objectif de ce projet est de créer un crm avec une liste de client et une liste de commande, avec la possibilite de gérer la création, modification et suppression.
+
+L'authentification sera également bientot integré via firebase
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

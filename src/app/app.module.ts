@@ -10,20 +10,23 @@ import { ClientsModule } from './clients/clients.module';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
 
+
+
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+  
   ],
   imports: [
+    CoreModule,
     BrowserModule,
     AppRoutingModule,
-    CoreModule,
     NgbModule,
     FontAwesomeModule,
     IconsModule,
     ClientsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

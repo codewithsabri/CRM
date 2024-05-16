@@ -9,6 +9,16 @@
       "typePresta": "",
       "client": "",
       "comment": ""
+    },
+    {
+      "id": "afa1",
+      "tjmHt": 4444,
+      "nbJours": 44,
+      "tva": 44,
+      "state": "OPTION",
+      "typePresta": "formation",
+      "client": "nouveau",
+      "comment": "4444"
     }
   ],
   "clients": [

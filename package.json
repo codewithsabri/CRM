@@ -2,13 +2,13 @@
   "name": "crm",
   "version": "0.0.0",
   "scripts": {
-    "s": "ng serve -o",
+    "s": "npm run json-server --watch --port 3000 mock_db/db.json",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "ng serve && npm run json-server --watch --port 3000 mock_db/db.json",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "server": "json-server --watch --port 3000 mock_db/db.json"
+    "json-server": "json-server --watch --port 3000 mock_db/db.json"
   },
   "private": true,
   "dependencies": {

@@ -12,7 +12,19 @@ export class PageAddOrdersComponent {
   newOrder: Order = {} as Order; 
   orderAdded: boolean = false; 
 
-  constructor(private orderService : OrdersService){}
+  constructor(private orderService : OrdersService){
+  
+  }
+
+
+
+  ngOnInit(): void {
+
+    console.log(this.newOrder)
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    
+  }
 
   onSubmit() {
     this.orderService.addOrder(this.newOrder)

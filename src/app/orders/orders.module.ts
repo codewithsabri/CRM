@@ -5,6 +5,8 @@ import { PageAddOrdersComponent } from './page-add-orders/page-add-orders.compon
 import { PageEditOrdersComponent } from './page-edit-orders/page-edit-orders.component';
 import { OrdersRoutingModule } from './orders-routing.module';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SharedModule } from '../shared/shared.module';
+import { TotalPipe } from '../shared/pipes/total.pipe';
 
 
 
@@ -12,14 +14,15 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
   declarations: [
     PageListOrdersComponent,
     PageAddOrdersComponent,
-    PageEditOrdersComponent
+    PageEditOrdersComponent,
+    
   ],
   imports: [
     CommonModule,
     OrdersRoutingModule,
     FormsModule,
-    ReactiveFormsModule
-   
+    ReactiveFormsModule,
+    SharedModule
   ]
 })
 export class OrdersModule { }
